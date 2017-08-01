@@ -79,4 +79,26 @@ Route::get('/about', function() {
 
 Route::get('cektampilan', function() {
 	return view('layouts.master');
+
 });
+
+// Route::get('/ortu', function() {
+// 	$ortu = App\ortu::all();
+// 	foreach ($ortu as $key) {
+// 		echo $key->nama_ayah;
+// 		echo " dengan ";
+// 		echo $key->nama_ibu;
+// 		echo " mempunyai anak";
+// 		foreach ($key->siswa as $data) {
+// 			echo "<li>".$data->nama."</li>";
+// 			echo "<hr>";
+// 		}
+// 	}
+// });
+
+Route::get('/coba', 'nisaaa@index');
+Route::get('/coba2', 'nisaaa@tampilanmodel');
+Route::get('/coba3', 'nisaaa@tampilanmodel1');
+Route::get('/coba4', 'nisaaa@percobaan');
+Route::resource('/ortu','ortuController');
+Route::resource('/siswa','siswaController');
